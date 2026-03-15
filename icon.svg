@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background gradient: soft lavender -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EDF0FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F2F5;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Main symbol gradient: pink to purple -->
+    <linearGradient id="symbolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF5CA8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9B6BFF;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Teal accent gradient -->
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C9A7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00A3D9;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Subtle drop shadow -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#9B6BFF" flood-opacity="0.18"/>
+    </filter>
+
+    <!-- Glow for top node -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="110" ry="110" fill="url(#bgGrad)"/>
+
+  <!-- Subtle dot texture -->
+  <circle cx="80" cy="80" r="3" fill="#9B6BFF" opacity="0.12"/>
+  <circle cx="160" cy="60" r="2" fill="#FF5CA8" opacity="0.15"/>
+  <circle cx="430" cy="90" r="3" fill="#00C9A7" opacity="0.12"/>
+  <circle cx="460" cy="180" r="2" fill="#9B6BFF" opacity="0.1"/>
+  <circle cx="70" cy="420" r="3" fill="#FF5CA8" opacity="0.1"/>
+  <circle cx="440" cy="430" r="2" fill="#00C9A7" opacity="0.12"/>
+  <circle cx="256" cy="470" r="2" fill="#9B6BFF" opacity="0.1"/>
+
+  <!-- Connector lines: top node to 3 children -->
+  <!-- Center vertical line down from top node -->
+  <line x1="256" y1="218" x2="256" y2="300" stroke="url(#symbolGrad)" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+  <!-- Horizontal bar connecting 3 children -->
+  <line x1="138" y1="300" x2="374" y2="300" stroke="url(#symbolGrad)" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+  <!-- Left child connector -->
+  <line x1="138" y1="300" x2="138" y2="332" stroke="url(#symbolGrad)" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+  <!-- Center child connector -->
+  <line x1="256" y1="300" x2="256" y2="332" stroke="url(#symbolGrad)" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+  <!-- Right child connector -->
+  <line x1="374" y1="300" x2="374" y2="332" stroke="url(#symbolGrad)" stroke-width="6" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Top leader node (large, gradient) -->
+  <circle cx="256" cy="182" r="62" fill="url(#symbolGrad)" filter="url(#softShadow)"/>
+  <!-- Crown highlight inside top node -->
+  <circle cx="256" cy="182" r="62" fill="white" opacity="0.12"/>
+  <!-- Crown shape inside leader circle -->
+  <path d="M226 196 L226 172 L241 184 L256 164 L271 184 L286 172 L286 196 Z"
+        fill="white" opacity="0.85"/>
+
+  <!-- Left child node (teal) -->
+  <circle cx="138" cy="358" r="40" fill="url(#tealGrad)" filter="url(#softShadow)"/>
+  <circle cx="138" cy="358" r="40" fill="white" opacity="0.1"/>
+
+  <!-- Center child node (pink-purple) -->
+  <circle cx="256" cy="358" r="40" fill="url(#symbolGrad)" filter="url(#softShadow)"/>
+  <circle cx="256" cy="358" r="40" fill="white" opacity="0.1"/>
+
+  <!-- Right child node (teal) -->
+  <circle cx="374" cy="358" r="40" fill="url(#tealGrad)" filter="url(#softShadow)"/>
+  <circle cx="374" cy="358" r="40" fill="white" opacity="0.1"/>
+
+  <!-- Small inner dots on child nodes for texture -->
+  <circle cx="138" cy="358" r="12" fill="white" opacity="0.3"/>
+  <circle cx="256" cy="358" r="12" fill="white" opacity="0.3"/>
+  <circle cx="374" cy="358" r="12" fill="white" opacity="0.3"/>
+</svg>
