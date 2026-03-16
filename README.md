@@ -1,6 +1,6 @@
 # Design Leadership Skill for Claude Code
 
-A **Claude Code skill** that turns Claude into a senior advisor for design org leadership and organizational decisions. Built for **VP of Design**, **Head of Design** and **CPO** navigating the real, hard calls that don't have easy answers.
+A **Claude Code skill** that turns Claude into a senior advisor for design org leadership and organizational decisions. Built for **VP of Design**, **Head of Design**, **Design Leads** and **CPO** navigating the real, hard calls that don't have easy answers.
 
 Ask it anything about org structure, hiring, managing up, team culture, vision-setting, performance management, or growing as a design executive - and get framework-grounded, opinionated guidance.
 
